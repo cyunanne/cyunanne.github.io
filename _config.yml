@@ -23,7 +23,7 @@ title: YUNA # the main title
 tagline: For studing dev stuffs # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  ver.2023.3.29.0
+  ver.2023.3.28.0
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: "https://cyunanne.github.io"
@@ -32,12 +32,12 @@ github:
   username: cyunanne # change to your github username
 
 twitter:
-  username: twitter_username # change to your twitter username
+  username: # change to your twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: "Choi Yuna"
+  name: "Yuna Choi"
   email: cyunanne@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
