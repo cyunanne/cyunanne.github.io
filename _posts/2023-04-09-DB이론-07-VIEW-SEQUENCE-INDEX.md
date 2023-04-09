@@ -5,6 +5,9 @@ categories: [Database]
 tags: [DB이론, Oracle]
 ---
 
+> VIEW, SEQUENCE, INDEX 의 생성/수정/삭제 구문은 [09. DDL : CREATE, ALTER, DROP](/posts/DB이론-09-DDL-CREATE-ALTER-DROP/)을 참조한다.
+{: .prompt-tip }
+
 ## VIEW
 - **논리적 가상 테이블**로, RESULT SET을 저장하는 객체
 - 테이블과 흡사하지만 실제 데이터가 저장되어 있는 것은 아니다.
@@ -28,18 +31,11 @@ tags: [DB이론, Oracle]
 {: .prompt-danger }
 > 특별한 이유가 없는 한 데이터 무결성을 위해 대부분의 컬럼에 NOT NULL 제약조건을 추가하게 되므로  VIEW에서는 INSERT가 거의 불가능하다.
 
-### VIEW 생성/삭제
-[08. DDL : CREATE, ALTER, DROP](https://cyunanne.github.io/posts/DB이론-08-DDL-CREATE-ALTER-DROP/) 참조
-
-
 <br>
 
 ## SEQUENCE
 - 일정한 간격의 숫자(번호)를 발생시키는 객체
 - 활용 : PRIMARY KEY가 지정된 컬럼에 삽입할 값을 생성
-
-### SEQUENCE 생성/수정/삭제
-[08. DDL : CREATE, ALTER, DROP](https://cyunanne.github.io/posts/DB이론-08-DDL-CREATE-ALTER-DROP/) 참조
 
 ### SEQUENCE 사용
 
@@ -78,6 +74,7 @@ WHERE 조건절;
 - **SELECT의 처리 속도를 향상**시키기 위해 컬럼에 대하여 생성하는 객체
 - 인덱스 내부 구조는 B* 트리 형식으로 되어있다.
 - `UNIQUE INDEX` : 중복값이 없는 컬럼에 UNIQUE INDEX를 생성하면 **더 빠른 속도**로 검색할 수 있다.
+- PK 또는 UNIQUE 제약 조건이 설정된 컬럼에 대해 **UNIQUE 인덱스가 자동 생성**된다.
 
 ### INDEX 사용의 장단점
 
@@ -89,12 +86,6 @@ WHERE 조건절;
   
 > SELECT ⟩⟩⟩⟩⟩⟩ INSERT/UPDATE/DELETE 인 테이블에 사용하면 성능적 이점을 볼 수 있다.
 {: .prompt-info }
-
-### INDEX 생성/삭제
-[08. DDL : CREATE, ALTER, DROP](https://cyunanne.github.io/posts/DB이론-08-DDL-CREATE-ALTER-DROP/) 참조
-
-### INDEX 자동생성
-PK 또는 UNIQUE 제약 조건이 설정된 컬럼에 대해 UNIQUE 인덱스가 자동 생성된다.
 
 ### INDEX 사용
 WHERE 절에 인덱싱 된 컬럼을 언급
